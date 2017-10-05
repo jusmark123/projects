@@ -14,7 +14,7 @@ class WikiCrawler {
 
     private $file;
 
-    public function _construct() {
+    public function __construct() {
         echo 'yup0;';
         $this->fetch_data();
     }
@@ -26,7 +26,7 @@ class WikiCrawler {
         $this->data = new DOMDocument();
         $this->data->loadHTML($html);
 
-        var_dump( $html );
+        var_dump( $this->data );
 
         die();
     }
