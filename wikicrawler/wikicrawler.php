@@ -32,7 +32,7 @@ class WikiCrawler {
 
             echo $key;
 
-            echo $table->nodeValue, PHP_EOL;
+            echo $table->getElementsByTagName('td');
         }
 
         die();
