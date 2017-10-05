@@ -30,9 +30,10 @@ class WikiCrawler {
         foreach( $tables as $key => $table) {
 
             echo $key;
+            if( ! $table->hasChildren() ) continue;
 
             foreach( $table as $items ) {
-
+                echo count($table->children);
                 foreach ($items as $item) {
                     if ($item->hasAttributes()) {
                         var_dump( $item->attributes);
