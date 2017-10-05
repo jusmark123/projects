@@ -26,7 +26,14 @@ class WikiCrawler {
         $this->data = new DOMDocument();
         $this->data->loadHTML($html);
 
-        var_dump( $this->data->getElementsByTagName('table') );
+        $tables = $this->data->getElementsByTagName('table');
+
+        foreach( $tables as $key => $table) {
+
+            echo $key;
+
+            echo $table->nodeValue, PHP_EOL;
+        }
 
         die();
     }
