@@ -26,7 +26,7 @@ class WikiCrawler {
         $this->data = new DOMDocument();
         $this->data->loadHTML($html);
 
-        var_dump( $this->data );
+        var_dump( $html );
 
         die();
     }
