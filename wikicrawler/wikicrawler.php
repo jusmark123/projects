@@ -8,14 +8,14 @@
 
 class WikiCrawler {
 
-    private $url;
+    private $url = 'https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population';
 
     private $data;
 
     private $file;
 
     public function _construct() {
-
+        $this->fetch_data();
     }
 
     public function fetch_data() {
@@ -33,3 +33,5 @@ class WikiCrawler {
 
     }
 }
+
+new WikiCrawler();
