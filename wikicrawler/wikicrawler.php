@@ -32,7 +32,10 @@ class WikiCrawler {
 
             echo $key;
 
-            echo $table->getElementsByTagName('td');
+            foreach( $table AS $item ) {
+
+                echo $item->nodeValue . "\n";
+            }
         }
 
         die();
