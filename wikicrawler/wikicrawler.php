@@ -25,17 +25,22 @@ class WikiCrawler {
 
         $this->data = new DOMDocument();
         $this->data->loadHTML($html);
-
         $tables = $this->data->getElementsByTagName('table');
 
         foreach( $tables as $key => $table) {
 
             echo $key;
 
-            foreach( $table AS $item ) {
+            foreach( $table as $items ) {
 
-                echo $item->nodeValue . "\n";
+                foreach ($items as $item) {
+                    if ($item->hasAttributes()) {
+                        var_dump( $item->attributes);
+                    }
+                }
+
             }
+
         }
 
         die();
