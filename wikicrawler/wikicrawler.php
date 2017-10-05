@@ -15,7 +15,7 @@ class WikiCrawler {
     private $file;
 
     public function _construct() {
-        echo 'yup0;'
+        echo 'yup0;';
         $this->fetch_data();
     }
 
